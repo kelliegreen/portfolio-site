@@ -1,0 +1,376 @@
+/* FONTS */
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800);*/
+
+html, body {
+	padding: 0;
+	margin: -10px 0;
+	height: 100%;
+	width: 100%;
+    font-size: 20px;
+    font-family: 'Source Code Pro', monospace!important;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 300; 
+    background-color: white;
+    color: black; }
+    
+/*body {
+    font-family: 'Philosopher', sans-serif;
+  background: #f5f6f7;
+  color: #f5f6f7;
+  font-size: 20px;}*/
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+/*hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }*/
+
+/* GENERAL STYLES */ 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none; }
+
+a:link,
+a:visited,
+a:active {
+  font-weight: 600;
+  color: black;
+  text-decoration: none; }
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 84px;
+  z-index: 1;
+  /*right: 0;*/
+  /*top: 50%;*/
+  /*margin-top: -10px; */
+  }
+  .nav a {
+    /*text-indent: -9999px;*/
+    /*display: block;*/
+    /*width: 14px;*/
+    /*height: 14px;*/
+    background: #C4C4F2;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    /*-webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s; */
+    }
+    .nav a:hover {
+      background: #DCD0FF;
+      /*-webkit-transition: background 1s;
+      -moz-transition: background 1s;
+      -ms-transition: background 1s;
+      -o-transition: background 1s;
+      transition: background 1s; */
+      }
+
+/*.mb-7 {
+  margin-top: 0px;
+  margin-bottom: 70px;
+  }*/
+
+/*.centered {
+	/*text-align: center;*/
+/*}*/
+
+/* SECTION STYLES */
+#hero,
+#about,
+#networks {
+  position: relative; 
+  background-color: #DCD0FF;}
+
+/*.hero-block {
+  height: 390px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -195px; }*/
+
+/*.hero-image {
+  width: auto;
+  height: auto; }*/
+
+/*.footer-block {
+  height: 180px;
+  margin-top: -90px; }*/
+
+/*#hero {
+  background: #DCD0FF; }
+
+#about {
+  background: #3498db; }
+
+#networks {
+  background: #474e5d; }*/
+
+.down-arrow {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px;
+  height: 14px;
+  background: url("../img/arrow.png") no-repeat; }
+
+/* WORK SECTION */
+/*#about .showcase {
+  width: 100%;
+  padding: 0px;
+}
+
+.showcase-tiles {
+  padding-top: 0px;
+  margin-top: 0px;
+  display: table-row; }
+
+.showcase-info {
+  display: table-row; }
+
+.showcase-info {
+  text-align: center; }
+
+/* THUMBNAIL SECTION */
+/*.d-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding-top: 25%;
+  line-height: 20px;
+  background: rgba(231, 76, 60, 0.9); }
+  .d-hover p {
+    display: block !important;
+    z-index: 500;
+    margin-top: 25px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300; }
+
+ul.slides {
+  line-height: 0px;
+  padding: 0px; }
+
+ul.slides li {
+display: inline-block;
+width: 25%; }
+
+ul.slides li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+ul.slides li a:hover .d-hover {
+  display: block; }
+
+ul.slides li a img {
+	width: 100%; }
+
+ul.slides li a p {
+	display: none; }
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+      ul.slides li {
+        width: 33%; } }
+    @media only screen and (max-width: 767px) {
+      ul.slides li {
+        width: 50%; } }
+    ul.slides li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative; }
+      ul.slides li a:hover .d-hover {
+        display: block; }
+      ul.slides li a img {
+        width: 100%; }
+      ul.slides li a p {
+        display: none; }*/
+
+/* NETWORKS SECTION */
+/*#networks {
+	width: 100%;
+	height: 100%;
+	padding-top: 200px;
+}*/
+
+/*#networks i {
+	font-size: 60px;
+	color: white;
+	padding: 18px;
+}
+
+#networks .dribbble:hover {
+	color: #ed6297;
+}
+
+#networks .facebook:hover {
+	color: #3b5998;
+}
+
+#networks .twitter:hover {
+	color: #2094CA;
+}
+
+#networks .mail:hover {
+	color: #f39c12;
+}*/
+
+#hero {
+    /*background-image: url('/img/KellieFreya.jpg');*/
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya.jpg) repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya.jpg) repeat 0 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    background-size: cover;
+    /*opacity: 0.7;*/
+}
+
+    @media only screen and (max-width: 1100px) {
+         #hero {
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
+            /*background-size: cover;*/
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            }
+    }
+    
+    @media only screen and (max-width: 640px) {
+        #hero {
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
+            /*background-size: cover;*/
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            }
+    }
+
+.hero-block h1 {
+    padding-top: 300px;
+    font-size: 100px;
+    font-weight: 500;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+.hero-block h3 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+#about h1, #skills h1, #networks h1 {
+    margin-top: 0;
+    margin-bottom: .8em;
+    border-bottom: 1px solid rgba(179, 120, 211, 0.7);
+    padding-top: 50px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#about a:hover {
+    color: #B378D3;
+}
+
+.about, .mean {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.kgprofile img {
+    width: auto;
+    height: 350px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.mean img {
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+    @media only screen and (max-width: 750px) {
+        .mean img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+#networks {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/kg.JPG) repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/kg.JPG) repeat 0 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background-size: cover;
+}
+
+
+
+#networks input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+#networks input[type="text"]:focus,
+#networks input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
+
+.btn {
+    background-color: #C4C4F2;
+}
