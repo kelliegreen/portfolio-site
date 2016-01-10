@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 	width: 100%;
     font-size: 20px;
-    font-family: 'Source Code Pro', monospace!important;
+    font-family: 'Source Code Pro', monospace !important;
     text-align: center;
     line-height: 36px;
     font-weight: 300; 
@@ -383,14 +383,22 @@ ul, menu, dir {
     /*margin-right: 0;*/
 }
 
-#screenshot {
-    width: 100%;
+#pieces, .pieces {
     height: 100%;
+}
+#screenshot {
+    width: 60%;
+    height: auto;
+    margin-left: 40%;
+   
 }
 
 #screenshot img {
     width: auto;
     height: auto;
-    /*float: right;*/
+
+    
+    
    
 }
+
