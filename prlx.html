@@ -1,0 +1,197 @@
+<!doctype html>  
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Holobox</title>
+    <meta name="viewport" content="width=700, initial-scale=0.3">
+
+<style>
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+#world {
+  -webkit-perspective: 500px;
+  -webkit-perspective-origin: -60% 30%;
+  width: 100%;
+  height: 100%;
+}
+
+#room {
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  margin-left: -300px;
+  margin-top: -250px;
+}
+
+#back,#front,#wall-left,#wall-right,#wall-top,#wall-bottom {
+  position: absolute;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+  -o-box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+  box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+}
+
+#shadow {
+  position: absolute;
+  width: 600px;
+  height: 100px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+  -o-box-shadow: 0 0 20px rgba(0,0,0,0.45) inset;
+  box-shadow: 0 0 20px rgba(0,0,0,0.45);
+  -webkit-transform: translate3d(0,550px,-10px) rotateX(70deg);
+}
+
+#back {
+  width: 600px;
+  height: 500px;
+  background: rgba(0,100,120,1);
+  text-align: center;
+  -webkit-transform: translateZ(-49px);
+}
+
+#front {
+  width: 600px;
+  height: 500px;
+  background: url(../stripe.png) no-repeat bottom;
+  -webkit-transform: translateZ(50px);
+}
+
+#wall-left {
+  height: 500px;
+  width: 100px;
+  left: 0;
+  background: #bbb;
+  -webkit-transform: translateX(-50px) rotate3d(0,50,0,90deg);
+}
+
+#wall-right {
+  height: 500px;
+  width: 100px;
+  right: 0;
+  background: #bbb;
+  -webkit-transform: translateX(50px) rotate3d(0,50,0,-90deg);
+}
+
+#wall-top {
+  height: 100px;
+  width: 600px;
+  top: 0;
+  background: #999;
+  -webkit-transform: translateY(-50px) rotate3d(50,0,0,90deg);
+}
+
+#wall-bottom {
+  height: 100px;
+  width: 600px;
+  bottom: 0;
+  background: #999;
+  -webkit-transform: translateY(50px) rotate3d(50,0,0,-90deg);
+}
+
+</style>
+   
+  <body>
+    
+
+    
+    <div id="world">
+      <div id="room">
+        <!-- The back wall which holds our content -->
+        <div id="back">
+                <div style="height:200px;"></div>
+        </div>
+        
+        <!-- The translucent front wall -->
+        <div id="front"></div>
+        
+        <!-- The remaining walls of the box -->
+        <div id="wall-left"></div>
+        <div id="wall-right"></div>
+        <div id="wall-top"></div>
+        <div id="wall-bottom"></div>
+        
+        <!-- A plane below the box which is used to simulate a shadow -->
+        <div id="shadow"></div>
+             <div style="height:200px;"></div>        <div style="height:200px;"></div>
+      </div>
+              <div style="height:200px;"></div>        <div style="height:200px;"></div>        <div style="height:200px;"></div>
+    </div>
+                  <div style="height:200px;"></div>        <div style="height:200px;"></div>        <div style="height:200px;"></div>
+                                <div style="height:200px;"></div>        <div style="height:200px;"></div>        <div style="height:200px;"></div>
+            <div style="height:200px;"></div>        <div style="height:200px;"></div>
+<script>
+var Holobox = (function(){
+  var world = document.getElementById('world')
+  , back = document.getElementById('back')
+  , front = document.getElementById('front')
+  , wallLeft = document.getElementById('wall-left')
+  , wallRight = document.getElementById('wall-right')
+  , wallTop = document.getElementById('wall-top')
+  , wallBottom = document.getElementById('wall-bottom')
+  , orientation = 0
+  , perspective = {
+      cx: 50, // current x
+      cy: 50, // current y
+      tx: 50, // target x
+      ty: 50 // target y
+    }
+  function initialize(){
+    addEventListener('mousemove', onMouseMove, false)
+    addEventListener('orientationchange', onOrientationChange, false)
+    addEventListener('devicemotion', onMotionChange, false)
+    updateOrientation()
+    update()
+  }
+  function onMouseMove(event){
+    perspective.tx = Math.round((event.clientX / window.innerWidth) * 100)
+    perspective.ty = Math.round((event.clientY / window.innerHeight) * 100)
+  }
+  function onOrientationChange(event){
+    updateOrientation()
+    event.preventDefault()
+  }
+  function onMotionChange(event){
+    var beta = orientation === 1 ? -event.accelerationIncludingGravity.z : -event.accelerationIncludingGravity.z
+    var gamma = orientation === 1 ? -event.accelerationIncludingGravity.y : -event.accelerationIncludingGravity.x
+    perspective.tx = ((gamma / 5) + 0.5) * 100
+    perspective.ty = ((beta / 5) - 0.5) * 100
+    event.preventDefault()
+  }
+  function updateOrientation(){
+    if (window.orientation == 90 || window.orientation == -90) {
+      orientation = 1
+    } else {
+      orientation = 0
+    }
+  }
+  function update(){
+    perspective.cx += (perspective.tx - perspective.cx) * 0.1
+    perspective.cy += (perspective.ty - perspective.cy) * 0.1
+    world.style.webkitPerspectiveOrigin = perspective.cx + '% ' + perspective.cy + '%'
+    world.style.perspectiveOrigin = perspective.cx + '% ' + perspective.cy + '%'
+    var stack = [back, wallLeft, wallRight, wallTop, wallBottom]
+    if (perspective.cx < 25) {
+      stack.push(wallLeft)
+    } else if (perspective.cx > 75) {
+      stack.push(wallRight)
+    }
+    stack.push(front)
+    for (var i = 0, len = stack.length; i < len; i++) {
+      stack[i].style.zIndex = i
+    }
+    setTimeout(update, 1000 / 30)
+  }
+  initialize()
+})()
+</script>
+  </body>
+</html>
