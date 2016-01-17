@@ -7,13 +7,17 @@ html, body {
 	height: 100%;
 	width: 100%;
     font-size: 20px;
-    font-family: 'Source Code Pro', monospace!important;
+    font-family: 'Source Code Pro', monospace !important;
     text-align: center;
     line-height: 36px;
     font-weight: 300;
     background-color: white;
     color: black; }
 
+* h1 {
+    font-size: 60px;
+    padding-bottom: 70px;
+}
 /*body {
     font-family: 'Philosopher', sans-serif;
   background: #f5f6f7;
@@ -23,11 +27,11 @@ html, body {
 nav ul {
   list-style: none; }
 
-blockquote, q {
+/*blockquote, q {
   quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: none; }
+  content: none; }*/
 
 /*hr {
   display: block;
@@ -38,11 +42,11 @@ blockquote:before, blockquote:after, q:before, q:after {
   padding: 0; }*/
 
 /* GENERAL STYLES */
-*, *:before, *:after {
+/**, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: none; }
+  border: none; }*/
 
 a:link,
 a:visited,
@@ -54,36 +58,34 @@ a:active {
 .nav {
   position: fixed;
   width: 100%;
-  height: 84px;
+  height: 55px;
   z-index: 1;
-  /*right: 0;*/
-  /*top: 50%;*/
-  /*margin-top: -10px; */
+  background-color: rgba(255,255,255,0.5);
   }
-  .nav a {
-    /*text-indent: -9999px;*/
-    /*display: block;*/
-    /*width: 14px;*/
-    /*height: 14px;*/
-    background: #C4C4F2;
+  
+  @media(max-width: 743px) {
+      .nav {
+          height: 100px;
+      }
+  }
+  .a-wrapper {
+      margin-top: 10px;
+  }
+  .a-wrapper a {
+    font-size: 30px;
+    margin: 10px 10px 0 10px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
     margin-bottom: 20px;
-    /*-webkit-transition: background 0.5s;
-    -moz-transition: background 0.5s;
-    -ms-transition: background 0.5s;
-    -o-transition: background 0.5s;
-    transition: background 0.5s; */
     }
     .nav a:hover {
-      background: #DCD0FF;
-      /*-webkit-transition: background 1s;
-      -moz-transition: background 1s;
-      -ms-transition: background 1s;
-      -o-transition: background 1s;
-      transition: background 1s; */
+      background: rgba(255,255,255,0.6);
       }
+      
+   /*.scroll {
+       opacity: 1;
+   }   */
 
 /*.mb-7 {
   margin-top: 0px;
@@ -97,7 +99,8 @@ a:active {
 /* SECTION STYLES */
 #hero,
 #about,
-#networks {
+#networks,
+#pieces {
   position: relative;
   background-color: #DCD0FF;}
 
@@ -125,14 +128,14 @@ a:active {
 #networks {
   background: #474e5d; }*/
 
-.down-arrow {
+/*.down-arrow {
   position: absolute;
   bottom: 70px;
   left: 50%;
   margin-left: -12px;
   width: 25px;
   height: 14px;
-  background: url("../img/arrow.png") no-repeat; }
+  background: url("../img/arrow.png") no-repeat; }*/
 
 /* WORK SECTION */
 /*#about .showcase {
@@ -252,43 +255,42 @@ ul, menu, dir {
 }*/
 
 #hero {
-    /*background-image: url('/img/KellieFreya.jpg');*/
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya.jpg) repeat 0 0;
-    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya.jpg) repeat 0 0;
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
-    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
-    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya.jpg) repeat 0 0;
+    /*background-image: url('../img/KellieFreya.jpg');*/
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/KellieFreya.jpg) repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/KellieFreya.jpg) repeat 0 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/KellieFreya.jpg) repeat 0 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya.jpg) repeat 0 0;
+    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya.jpg) repeat 0 0;
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya.jpg) repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya.jpg) repeat 0 0;
     background-size: cover;
     /*opacity: 0.7;*/
 }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1300px) {
          #hero {
-             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya2.jpg) repeat 0 0;
-            /*background-size: cover;*/
+             /*margin: 0;*/
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya2.jpg) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya2.jpg) repeat 0 0;
             background-repeat: no-repeat;
             background-size: auto 100%;
             }
     }
 
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 800px) {
         #hero {
-             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/KellieFreya1.jpg) repeat 0 0;
-            /*background-size: cover;*/
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya1.jpg) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/KellieFreya1.jpg) repeat 0 0;
             background-repeat: no-repeat;
             background-size: auto 100%;
             }
@@ -307,21 +309,29 @@ ul, menu, dir {
 }
 
 
-#about h1, #skills h1, #networks h1 {
+#about h1, #skills h1, #networks h1, #pieces h1 {
     margin-top: 0;
-    margin-bottom: .8em;
+    margin-bottom: 1.5em;
     border-bottom: 1px solid rgba(179, 120, 211, 0.7);
-    padding-top: 50px;
+    padding-top: 100px;
     font-family: 'Source Code Pro', monospace;
 }
 
-#about a:hover {
+#about a:hover, #pieces a:hover {
     color: #B378D3;
 }
 
-.about, .mean {
+.about, .mean, .pieces, .container-fluid {
     width: 80%;
     margin: 0 auto;
+}
+.about-me {
+    padding-bottom: 90px;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 26px;
+    /*font-weight: 100;*/
+    /*text-align: center;*/
 }
 
 .kgprofile img {
@@ -329,7 +339,7 @@ ul, menu, dir {
     height: 350px;
     border-radius: 50%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -337,7 +347,7 @@ ul, menu, dir {
     margin-top: 20px;
     width: auto;
     height: auto;
-    margin-bottom: 20px;
+    padding-bottom: 70px;
 }
 
     @media only screen and (max-width: 750px) {
@@ -348,15 +358,45 @@ ul, menu, dir {
     }
 
 #networks {
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(/img/kg.JPG) repeat 0 0;
-    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(/img/kg.JPG) repeat 0 0;
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
-    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
-    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(/img/kg.JPG) repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/kg.JPG) repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/kg.JPG) repeat 0 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/kg.JPG) repeat 0 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg.JPG) repeat 0 0;
+    background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg.JPG) repeat 0 0;
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg.JPG) repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg.JPG) repeat 0 0;
     background-size: cover;
 }
+
+
+    @media only screen and (max-width: 1300px) {
+         #networks {
+             /*margin: 0;*/
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/kg1.JPG) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/kg1.JPG) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/kg1.JPG) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg1.JPG) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg1.JPG) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg1.JPG) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg1.JPG) repeat 0 0;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #networks {
+             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png) repeat 0 0, url(../img/kg2.JPG) repeat 0 0;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url(../img/kg2.JPG) repeat 0 0;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.6))), url(../img/kg2.JPG) repeat 0 0;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg2.JPG) repeat 0 0;
+            background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg2.JPG) repeat 0 0;
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg2.JPG) repeat 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/kg2.JPG) repeat 0 0;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            }
+    }
 
 
 
@@ -365,27 +405,160 @@ ul, menu, dir {
   border: none;
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
+  outline: none;
+  /*background: rbga(255, 255, 255, .2);    */
 }
 #networks input[type="text"]:focus,
-#networks input[type="text"].focus {
+#networks input[type="text"].focus,
+#networks textarea:focus {
   border-bottom: solid 2px #969696;
+}
+
+#networks textarea {
+    outline: none;
+    border: none;
 }
 
 .btn {
     background-color: #C4C4F2;
 }
 
-.links {
-  bottom: 0;
-  left: 40%;
-  right: 40%;
-  position: absolute;
-  width: auto;
+#description {
+    /*width: 40%;*/
+    /*margin: 0;*/
+    float: left;
+    /*margin-right: 0;*/
 }
+
+
+
+#pieces, .pieces {
+    height: 100%;
+}
+#screenshot {
+    width: 45%;
+    height: auto;
+    margin-left: 40%;
+}
+
+@media(max-width: 1700px) {
+    #screenshot {
+        /*margin-left: 4%;*/
+        margin-left: 28%;
+        float: left;
+        /*clear: left;*/
+    }
+
+    .center-projects {
+        /*margin: 0 auto;*/
+        width: 100%;
+        height: 70%;
+    }
+    #description {
+        /*margin-left: 35%;*/
+        width: auto;
+    }
+    
+    #description p {
+        /*margin-left: 35%;*/
+        margin-bottom: 40px;
+    }
+}
+
+#screenshot img {
+    width: 100%;
+    height: auto;
+}
+
+
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+figure {
+	/*width: 300px;
+	height: 200px;*/
+	margin: 0;
+	padding: 0;
+	/*background: #fff;*/
+	overflow: hidden;
+}
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+#screenshot figure {
+	position: relative;
+}
+
+#screenshot figure img {
+    -webkit-filter: grayscale(80%);
+	filter: grayscale(80%);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+#screenshot figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+#screenshot figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+#screenshot figure:hover::before {
+	-webkit-animation: shine 1s;
+	animation: shine 1s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+
+
+
+.links {
+  bottom: 5px;
+  /*left: 0;*/
+  left: 10%;
+  right: 10%;
+  position: fixed;
+  width: auto;
+  /*float: left;  */
+}
+/*@media(max-width: 1200px) {
+    .links {
+        left: 10%;
+        right: 10%;
+    }
+}*/
 .social_icon {
   padding: 0 1em;
-  opacity: 0.7;
-  font-size: .8em;
+  /*opacity: 0.7;*/
+  /*font-size: .8em;*/
 }
 
 .contact-button {
@@ -396,9 +569,13 @@ ul, menu, dir {
 h5 {
   font-family: 'Source Code Pro';
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-transform: uppercase;
 }
+
+/*#networks h1 {
+        
+}*/
 
 #networks h3 {
   margin-bottom: 0;
@@ -406,4 +583,21 @@ h5 {
   font-family: 'Source Code Pro';
   font-weight: 700;
   font-size: 1.4em;
+}
+
+
+@media(max-width: 850px) {
+    .container-fluid {
+        width: 100%;
+        height: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    #networks input[type="text"] {
+        float: left;
+        clear: left;
+        margin-left: 20%;
+        margin-bottom: 10px;
+    }
 }
