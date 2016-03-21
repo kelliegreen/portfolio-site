@@ -428,20 +428,24 @@ ul, menu, dir {
     /*margin: 0;*/
     float: left;
     /*margin-right: 0;*/
+    padding: 0;
+    width: 42%;
 }
 
 
 
-#pieces, .pieces {
-    height: 100%;
-}
+
 #screenshot {
-    width: 45%;
+    width: 55%;
     height: auto;
-    margin-left: 40%;
+    margin-left: 45%;
+    padding-bottom: 6em;
 }
 
-@media(max-width: 1700px) {
+@media(max-width: 1260px) {
+  #pieces .pieces {
+    height: 95em;
+  }
     #screenshot {
         /*margin-left: 4%;*/
         margin-left: 28%;
